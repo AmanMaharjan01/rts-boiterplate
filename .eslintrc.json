@@ -7,23 +7,21 @@
     "plugin:react/recommended",
     "standard-with-typescript",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "rts-boilerplate/tsconfig.json"
+
   },
   "plugins": ["react", "prettier"],
   "rules": {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
-    "no-console": "warn",
-    "prettier/prettier": "error"
+    "no-console": "warn"
   },
   "settings": {
     "import/resolver": {

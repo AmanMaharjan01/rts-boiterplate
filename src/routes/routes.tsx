@@ -13,7 +13,6 @@ export default function Route() {
     ]);
   }
 
-
   const SuspenseComponent = ({children} : {
     children: React.ReactNode
   }) => (
