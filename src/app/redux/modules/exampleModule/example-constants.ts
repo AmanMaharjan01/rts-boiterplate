@@ -1,0 +1,1 @@
+export const REQUEST_EXAMPLE = "REQUEST_EXAMPLE" as const;
