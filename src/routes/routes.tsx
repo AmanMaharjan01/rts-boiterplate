@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 
-const ExamplePage = React.lazy(async () => await import('pages/@module/ExamplePage'));
+const ExamplePage = React.lazy(async () => await import('pages/@example/ExamplePage'));
 
-export default function Route() {
+export default function Routes() {
   return useRoutes([
     {
       path: '/',
