@@ -14,7 +14,7 @@ export default function ExampleComponent({ label, bgColor, color, handleClick }:
           backgroundColor: bgColor,
           padding: '10px 20px',
           border: 'unset',
-          color: color,
+          color,
         }}
       >
         {label ?? 'Say hi to AMan'}
