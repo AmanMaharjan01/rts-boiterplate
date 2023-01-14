@@ -1,1 +1,1 @@
-export const REQUEST_EXAMPLE = "REQUEST_EXAMPLE" as const;
+export const REQUEST_EXAMPLE = 'REQUEST_EXAMPLE';

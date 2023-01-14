@@ -2,8 +2,7 @@ import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { REQUEST_EXAMPLE } from './example-constants';
 import { ICounterState } from './example-contracts';
 
-
-const initialState = { data: [], status: null } as ICounterState
+const initialState: ICounterState = { data: [], status: null };
 
 export const requestExample = createAction(REQUEST_EXAMPLE);
 
@@ -12,18 +11,18 @@ const exampleSlice = createSlice({
   initialState,
   reducers: {
     getData(state) {
-      state.status = "requesting";
+      state.status = 'requesting';
     },
     recievedData(state, action: PayloadAction<object>) {
       state.data = action.payload as object[];
-      state.status = "received";
+      state.status = 'received';
     },
     errorData(state) {
       state.data = [] as object[];
-      state.status = "error";
+      state.status = 'error';
     },
   },
-})
+});
 
-export const { getData, recievedData, errorData } = exampleSlice.actions
-export default exampleSlice.reducer
+export const { getData, recievedData, errorData } = exampleSlice.actions;
+export default exampleSlice.reducer;

@@ -1,4 +1,3 @@
-
 export default function exampleUtil() {
-  return null
+  return null;
 }

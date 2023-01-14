@@ -1,5 +1,5 @@
-import httpClient from "./httpClient";
+import httpClient from './httpClient';
 
 export const getExample = async () => {
-  return await httpClient.get("/api/example");
+  return await httpClient.get('/api/example');
 };

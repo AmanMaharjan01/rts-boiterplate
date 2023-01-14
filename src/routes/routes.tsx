@@ -1,22 +1,21 @@
-import React, { Suspense } from "react";
-import { useRoutes } from "react-router-dom";
+import React, { Suspense } from 'react';
+import { useRoutes } from 'react-router-dom';
 
-const ExamplePage = React.lazy(() => import("pages/@module/ExamplePage"))
+const ExamplePage = React.lazy(async () => await import('pages/@module/ExamplePage'));
 
 export default function Route() {
-    return useRoutes([
-      {
-        path: '/',
-        element: <SuspenseComponent><ExamplePage /></SuspenseComponent>
-       
-      },
-    ]);
-  }
+  return useRoutes([
+    {
+      path: '/',
+      element: (
+        <SuspenseComponent>
+          <ExamplePage />
+        </SuspenseComponent>
+      ),
+    },
+  ]);
+}
 
-  const SuspenseComponent = ({children} : {
-    children: React.ReactNode
-  }) => (
-    <Suspense fallback={<div>loading...</div>}>
-      {children}
-    </Suspense>
-  )
+const SuspenseComponent = ({ children }: { children: React.ReactNode }) => (
+  <Suspense fallback={<div>loading...</div>}>{children}</Suspense>
+);

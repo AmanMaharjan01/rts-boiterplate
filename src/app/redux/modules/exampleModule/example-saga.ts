@@ -1,7 +1,7 @@
-import { getExample } from "app/services/exampleServices";
-import { call, put, takeLatest } from "redux-saga/effects";
-import { REQUEST_EXAMPLE } from "./example-constants";
-import { errorData, recievedData } from "./example-slice";
+import { getExample } from 'app/services/exampleServices';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { REQUEST_EXAMPLE } from './example-constants';
+import { errorData, recievedData } from './example-slice';
 
 function* fetchExample(): object {
   try {
@@ -13,7 +13,7 @@ function* fetchExample(): object {
 }
 
 function* exampleWatcherSaga() {
-    yield takeLatest(REQUEST_EXAMPLE, fetchExample);
-  }
-  
-  export default exampleWatcherSaga;
+  yield takeLatest(REQUEST_EXAMPLE, fetchExample);
+}
+
+export default exampleWatcherSaga;

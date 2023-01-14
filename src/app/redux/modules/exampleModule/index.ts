@@ -1,11 +1,11 @@
-import { ISagaModule } from "redux-dynamic-modules-saga";
-import { IExampleAwareState } from "./example-contracts";
-import insightWatcherSaga from "./example-saga";
-import exampleSlice, { requestExample } from "./example-slice";
+import { ISagaModule } from 'redux-dynamic-modules-saga';
+import { IExampleAwareState } from './example-contracts';
+import insightWatcherSaga from './example-saga';
+import exampleSlice, { requestExample } from './example-slice';
 
 export function getExampleModule(): ISagaModule<IExampleAwareState> {
   return {
-    id: "career-module",
+    id: 'career-module',
     reducerMap: {
       example: exampleSlice,
     },
